@@ -1,0 +1,7 @@
+.headblock {
+    display: flex;
+    justify-content: space-between;
+    &__navbar__link {
+        margin-left: 60px;
+    }
+}
