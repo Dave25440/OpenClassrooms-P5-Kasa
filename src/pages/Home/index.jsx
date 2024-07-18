@@ -1,4 +1,4 @@
-function Home() {
+const Home = () => {
     return (
         <div>
             <header>
@@ -8,6 +8,6 @@ function Home() {
             </header>
         </div>
     );
-}
+};
 
 export default Home;

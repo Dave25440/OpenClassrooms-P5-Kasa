@@ -4,7 +4,7 @@ import About from "../../pages/About";
 import Housing from "../../pages/Housing";
 import Error from "../Error";
 
-function AppRouter() {
+const AppRouter = () => {
     return (
         <Router>
             <Routes>
@@ -15,6 +15,6 @@ function AppRouter() {
             </Routes>
         </Router>
     );
-}
+};
 
 export default AppRouter;
