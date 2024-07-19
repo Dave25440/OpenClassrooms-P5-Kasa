@@ -1,7 +1,18 @@
 .headblock {
     display: flex;
     justify-content: space-between;
-    &__navbar__link {
+    align-items: center;
+    margin: 50px 100px;
+
+    &__link {
+        color: black;
+        font-size: 24px;
+        font-weight: 500;
+        text-decoration: none;
         margin-left: 60px;
+
+        &--underline {
+            text-decoration: underline;
+        }
     }
 }
