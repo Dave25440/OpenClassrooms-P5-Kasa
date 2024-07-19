@@ -1,0 +1,17 @@
+@import "../Layout/Layout.module.scss";
+
+.bannerblock {
+    text-align: center;
+    background: url("../../assets/home-illustration.png") no-repeat center;
+    margin: 0 100px;
+    @include shadow-radius;
+
+    &__text {
+        text-shadow: 0 -1px $color-tertiary, 1px 0 $color-tertiary,
+            0 1px $color-tertiary, -1px 0 $color-tertiary;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 80px 0;
+        @include text-format($color-secondary, 48px, 700);
+        @include shadow-radius;
+    }
+}

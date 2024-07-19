@@ -7,7 +7,7 @@
     gap: 50px;
     background-color: $color-tertiary;
     padding: 50px 0 25px 0;
-    @include text-format($color-secondary);
+    @include text-format($color-secondary, 24px, 500);
 
     &__logo {
         width: 122px;

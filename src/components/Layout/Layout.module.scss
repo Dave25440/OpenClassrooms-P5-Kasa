@@ -1,13 +1,18 @@
 // Variables
 $color-primary: #ff6060;
-$color-secondary: #ffffff;
-$color-tertiary: #000000;
+$color-secondary: #fff;
+$color-tertiary: #000;
 
 // Mixins
-@mixin text-format($color) {
+@mixin text-format($color, $size, $weight) {
     color: $color;
-    font-size: 24px;
-    font-weight: 500;
+    font-size: $size;
+    font-weight: $weight;
+}
+
+@mixin shadow-radius {
+    border-radius: 25px;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 // Global

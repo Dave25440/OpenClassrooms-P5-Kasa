@@ -9,7 +9,7 @@
     &__link {
         text-decoration: none;
         margin-left: 60px;
-        @include text-format($color-tertiary);
+        @include text-format($color-tertiary, 24px, 500);
 
         &--underline {
             text-decoration: underline;
