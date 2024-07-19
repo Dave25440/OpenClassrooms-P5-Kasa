@@ -1,3 +1,16 @@
+// Variables
+$color-primary: #ff6060;
+$color-secondary: #ffffff;
+$color-tertiary: #000000;
+
+// Mixins
+@mixin text-format($color) {
+    color: $color;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+// Global
 * {
     font-family: "Montserrat", sans-serif;
     font-style: normal;
