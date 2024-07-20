@@ -11,6 +11,12 @@ $color-cardblock: #f6f6f6;
     font-weight: $weight;
 }
 
+@mixin card-format($width, $height) {
+    width: $width;
+    height: $height;
+    border-radius: 10px;
+}
+
 @mixin shadow-radius {
     border-radius: 25px;
     filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));

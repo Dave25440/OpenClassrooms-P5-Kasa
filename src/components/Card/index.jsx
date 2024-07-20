@@ -12,6 +12,11 @@ const Card = () => {
                     className={styles.cardblock}
                 >
                     <article>
+                        <img
+                            src={housing.cover}
+                            alt={housing.title}
+                            className={styles.cardblock__cover}
+                        />
                         <p className={styles.cardblock__title}>
                             {housing.title}
                         </p>
