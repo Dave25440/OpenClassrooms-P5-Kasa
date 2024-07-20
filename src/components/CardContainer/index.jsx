@@ -5,11 +5,6 @@ const CardContainer = () => {
     return (
         <section className={styles.cardsection}>
             <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
         </section>
     );
 };
