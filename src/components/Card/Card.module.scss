@@ -1,8 +1,13 @@
 @import "../Layout/Layout.module.scss";
 
 .cardblock {
+    text-decoration: none;
     background-color: $color-primary;
     border-radius: 10px;
+
+    &:hover {
+        filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.5));
+    }
 
     &__title {
         display: flex;

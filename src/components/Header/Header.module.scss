@@ -11,6 +11,7 @@
         margin-left: 60px;
         @include text-format($color-tertiary, 24px, 500);
 
+        &:hover,
         &--underline {
             text-decoration: underline;
         }
