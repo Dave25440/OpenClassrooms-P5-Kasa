@@ -17,9 +17,9 @@ const Card = () => {
                             alt={housing.title}
                             className={styles.cardblock__cover}
                         />
-                        <p className={styles.cardblock__title}>
+                        <h2 className={styles.cardblock__title}>
                             {housing.title}
-                        </p>
+                        </h2>
                     </article>
                 </Link>
             ))}
