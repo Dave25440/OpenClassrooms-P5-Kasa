@@ -9,9 +9,17 @@
         filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.5));
     }
 
+    @media (max-width: 375px) {
+        @include card-format(100%, 255px);
+    }
+
     &__cover {
         object-fit: cover;
         @include card-format(100%, 340px);
+
+        @media (max-width: 375px) {
+            @include card-format(100%, 255px);
+        }
     }
 
     &__title {
@@ -29,5 +37,9 @@
         padding: 20px;
         @include text-format($color-secondary, 18px, 700);
         @include card-format(calc(100% - 40px), 300px);
+
+        @media (max-width: 375px) {
+            @include card-format(calc(100% - 40px), 215px);
+        }
     }
 }
