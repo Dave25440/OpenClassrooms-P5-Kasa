@@ -22,6 +22,11 @@ $color-cardblock: #f6f6f6;
     filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 }
 
+@mixin shadow-radius-small {
+    border-radius: 10px;
+    filter: none;
+}
+
 // Global
 * {
     font-family: "Montserrat", sans-serif;

@@ -6,6 +6,13 @@
     margin: 0 100px;
     @include shadow-radius;
 
+    @media (max-width: 375px) {
+        text-align: left;
+        background-size: 190%;
+        margin: 0 20px 25px 20px;
+        @include shadow-radius-small;
+    }
+
     &__text {
         text-shadow: 0 -1px $color-tertiary, 1px 0 $color-tertiary,
             0 1px $color-tertiary, -1px 0 $color-tertiary;
@@ -13,5 +20,12 @@
         padding: 80px 0;
         @include text-format($color-secondary, 48px, 700);
         @include shadow-radius;
+
+        @media (max-width: 375px) {
+            text-shadow: none;
+            padding: 30px 95px 30px 15px;
+            @include text-format($color-secondary, 24px, 700);
+            @include shadow-radius-small;
+        }
     }
 }
