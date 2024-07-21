@@ -6,6 +6,10 @@
     align-items: center;
     margin: 50px 100px;
 
+    @media (max-width: 375px) {
+        margin: 25px 20px;
+    }
+
     &__link {
         text-decoration: none;
         margin-left: 60px;
@@ -14,6 +18,12 @@
         &:hover,
         &--underline {
             text-decoration: underline;
+        }
+
+        @media (max-width: 375px) {
+            text-transform: uppercase;
+            margin-left: 25px;
+            @include text-format($color-tertiary, 12px, 500);
         }
     }
 }

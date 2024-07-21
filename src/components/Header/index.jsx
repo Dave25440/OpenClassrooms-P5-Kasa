@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
 import styles from "./Header.module.scss";
 import Logo from "../../assets/kasa-logo.png";
+import SmallLogo from "../../assets/kasa-logo-small.png";
 
 const Header = () => {
     return (
         <header className={styles.headblock}>
-            <img src={Logo} alt="Kasa" />
+            <picture>
+                <source srcset={SmallLogo} media="(max-width: 375px)" />
+                <img src={Logo} alt="Kasa" />
+            </picture>
             <nav>
                 <Link
                     to="/"
