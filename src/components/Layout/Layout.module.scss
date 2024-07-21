@@ -5,6 +5,13 @@ $color-tertiary: #000;
 $color-cardblock: #f6f6f6;
 
 // Mixins
+@mixin column-flexbox($gap) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $gap;
+}
+
 @mixin text-format($color, $size, $weight) {
     color: $color;
     font-size: $size;
@@ -17,14 +24,9 @@ $color-cardblock: #f6f6f6;
     border-radius: 10px;
 }
 
-@mixin shadow-radius {
-    border-radius: 25px;
-    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
-}
-
-@mixin shadow-radius-small {
-    border-radius: 10px;
-    filter: none;
+@mixin radius-shadow($radius, $filter) {
+    border-radius: $radius;
+    filter: $filter;
 }
 
 // Global

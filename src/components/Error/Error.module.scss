@@ -1,11 +1,8 @@
 @import "../Layout/Layout.module.scss";
 
 .errorblock {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 100px;
     padding: 40px 100px 140px 100px;
+    @include column-flexbox(100px);
 
     &__title {
         @include text-format($color-primary, 288px, 700);

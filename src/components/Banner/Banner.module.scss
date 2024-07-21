@@ -4,28 +4,29 @@
     text-align: center;
     background: url("../../assets/home-illustration.png") no-repeat center;
     margin: 0 100px;
-    @include shadow-radius;
+    @include radius-shadow(25px, drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25)));
 
     @media (max-width: 375px) {
         text-align: left;
         background-size: 190%;
         margin: 0 20px;
-        @include shadow-radius-small;
+        @include radius-shadow(10px, none);
     }
 
     &__text {
         text-shadow: 0 -1px $color-tertiary, 1px 0 $color-tertiary,
-            0 1px $color-tertiary, -1px 0 $color-tertiary;
+            0 1px $color-tertiary, -1px 0 $color-tertiary,
+            0 4px 4px rgba(0, 0, 0, 0.25);
         background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 25px;
         padding: 80px 0;
         @include text-format($color-secondary, 48px, 700);
-        @include shadow-radius;
 
         @media (max-width: 375px) {
             text-shadow: none;
+            border-radius: 10px;
             padding: 30px 95px 30px 15px;
             @include text-format($color-secondary, 24px, 700);
-            @include shadow-radius-small;
         }
     }
 }
