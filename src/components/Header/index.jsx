@@ -7,19 +7,25 @@ const Header = () => {
     return (
         <header className={styles.headblock}>
             <picture>
-                <source srcset={SmallLogo} media="(max-width: 375px)" />
+                <source srcSet={SmallLogo} media="(max-width: 375px)" />
                 <img src={Logo} alt="Kasa" />
             </picture>
             <nav>
-                <Link
-                    to="/"
-                    className={`${styles.headblock__link} ${styles["headblock__link--underline"]}`}
-                >
-                    Accueil
-                </Link>
-                <Link to="/a-propos" className={styles.headblock__link}>
-                    À Propos
-                </Link>
+                <ul className={styles.headblock__list}>
+                    <li>
+                        <Link
+                            to="/"
+                            className={`${styles.headblock__link} ${styles["headblock__link--underline"]}`}
+                        >
+                            Accueil
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/a-propos" className={styles.headblock__link}>
+                            À Propos
+                        </Link>
+                    </li>
+                </ul>
             </nav>
         </header>
     );

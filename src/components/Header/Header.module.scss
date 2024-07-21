@@ -10,6 +10,12 @@
         margin: 25px 20px;
     }
 
+    &__list {
+        display: flex;
+        list-style: none;
+        padding: 0;
+    }
+
     &__link {
         text-decoration: none;
         margin-left: 60px;
