@@ -15,6 +15,8 @@
     }
 
     &__title {
+        display: flex;
+        align-items: flex-end;
         position: absolute;
         bottom: 0;
         background: linear-gradient(
@@ -26,6 +28,6 @@
         );
         padding: 20px;
         @include text-format($color-secondary, 18px, 700);
-        @include card-format(calc(100% - 40px), null);
+        @include card-format(calc(100% - 40px), 300px);
     }
 }
