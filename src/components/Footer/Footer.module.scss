@@ -9,6 +9,13 @@
     padding: 50px 0 25px 0;
     @include text-format($color-secondary, 24px, 500);
 
+    @media (max-width: 375px) {
+        text-align: center;
+        gap: 15px;
+        padding: 60px 135px;
+        @include text-format($color-secondary, 12px, 500);
+    }
+
     &__logo {
         width: 122px;
     }
