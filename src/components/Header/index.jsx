@@ -1,9 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import styles from "./Header.module.scss";
 import Logo from "../../assets/kasa-logo.png";
 import SmallLogo from "../../assets/kasa-logo-small.png";
 
 const Header = () => {
+    const location = useLocation();
+
     return (
         <header className={styles.headblock}>
             <picture>
@@ -15,13 +17,24 @@ const Header = () => {
                     <li>
                         <Link
                             to="/"
-                            className={`${styles.headblock__link} ${styles["headblock__link--underline"]}`}
+                            className={`${styles.headblock__link} ${
+                                location.pathname === "/"
+                                    ? styles["headblock__link--underline"]
+                                    : null
+                            }`}
                         >
                             Accueil
                         </Link>
                     </li>
                     <li>
-                        <Link to="/a-propos" className={styles.headblock__link}>
+                        <Link
+                            to="/a-propos"
+                            className={`${styles.headblock__link} ${
+                                location.pathname === "/a-propos"
+                                    ? styles["headblock__link--underline"]
+                                    : null
+                            }`}
+                        >
                             À Propos
                         </Link>
                     </li>
