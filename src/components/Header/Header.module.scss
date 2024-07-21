@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 50px 100px;
+    margin: 40px 100px 50px 100px;
 
     @media (max-width: 375px) {
         margin: 25px 20px;
@@ -18,7 +18,7 @@
 
     &__link {
         text-decoration: none;
-        margin-left: 60px;
+        margin-left: 65px;
         @include text-format($color-tertiary, 24px, 500);
 
         &:hover,
