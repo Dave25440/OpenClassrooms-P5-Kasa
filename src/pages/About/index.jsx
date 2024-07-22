@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Banner from "../../components/Banner";
+import CollapseContainer from "../../components/CollapseContainer";
 
 const About = () => {
     useEffect(() => {
@@ -9,6 +10,7 @@ const About = () => {
     return (
         <>
             <Banner />
+            <CollapseContainer />
         </>
     );
 };
