@@ -10,6 +10,10 @@
     padding: 50px;
     margin: 50px 100px;
 
+    @media (max-width: $breakpoint-medium) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     @media (max-width: $breakpoint-small) {
         grid-template-columns: 1fr;
         row-gap: 20px;
