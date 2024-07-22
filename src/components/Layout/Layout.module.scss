@@ -1,38 +1,6 @@
-// Variables
-$breakpoint-medium: 1024px;
-$breakpoint-small: 768px;
-$color-primary: #ff6060;
-$color-secondary: #fff;
-$color-tertiary: #000;
-$color-cardblock: #f6f6f6;
-$color-collapseframe: rgba(246, 246, 246, 0.45);
+@import "../../styles/mixins.module.scss";
+@import "../../styles/variables.module.scss";
 
-// Mixins
-@mixin column-flexbox($gap) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: $gap;
-}
-
-@mixin text-format($color, $size, $weight) {
-    color: $color;
-    font-size: $size;
-    font-weight: $weight;
-}
-
-@mixin card-format($width, $height) {
-    width: $width;
-    height: $height;
-    border-radius: 10px;
-}
-
-@mixin radius-shadow($radius, $filter) {
-    border-radius: $radius;
-    filter: $filter;
-}
-
-// Global
 * {
     font-family: "Montserrat", sans-serif;
     font-style: normal;
