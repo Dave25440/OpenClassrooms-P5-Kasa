@@ -1,28 +1,19 @@
 import { Link } from "react-router-dom";
-import housingList from "../../data/housingList.json";
 import styles from "./Card.module.scss";
 
-const Card = () => {
+const Card = ({ id, title, cover }) => {
     return (
         <>
-            {housingList.map((housing) => (
-                <Link
-                    to={`/logement/${housing.id}`}
-                    key={housing.id}
-                    className={styles.cardblock}
-                >
-                    <article>
-                        <img
-                            src={housing.cover}
-                            alt={housing.title}
-                            className={styles.cardblock__cover}
-                        />
-                        <h2 className={styles.cardblock__title}>
-                            {housing.title}
-                        </h2>
-                    </article>
-                </Link>
-            ))}
+            <Link to={`/logement/${id}`} className={styles.cardblock}>
+                <article>
+                    <img
+                        src={cover}
+                        alt={title}
+                        className={styles.cardblock__cover}
+                    />
+                    <h2 className={styles.cardblock__title}>{title}</h2>
+                </article>
+            </Link>
         </>
     );
 };
