@@ -6,7 +6,7 @@
     @include text-format($color-secondary, 24px, 500);
     @include column-flexbox(45px);
 
-    @media (max-width: 375px) {
+    @media (max-width: $breakpoint-small) {
         text-align: center;
         padding: 60px 135px;
         @include text-format($color-secondary, 12px, 500);

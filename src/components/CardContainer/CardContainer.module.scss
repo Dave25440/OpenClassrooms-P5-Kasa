@@ -10,7 +10,7 @@
     padding: 50px;
     margin: 50px 100px;
 
-    @media (max-width: 375px) {
+    @media (max-width: $breakpoint-small) {
         grid-template-columns: 1fr;
         row-gap: 20px;
         background-color: transparent;

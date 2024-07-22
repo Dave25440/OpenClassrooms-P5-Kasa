@@ -9,7 +9,7 @@ const Header = () => {
     return (
         <header className={styles.headblock}>
             <picture>
-                <source srcSet={SmallLogo} media="(max-width: 375px)" />
+                <source srcSet={SmallLogo} media="(max-width: 768px)" />
                 <img src={Logo} alt="Kasa" />
             </picture>
             <nav>

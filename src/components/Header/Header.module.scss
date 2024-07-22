@@ -6,7 +6,7 @@
     align-items: center;
     margin: 40px 100px 50px 100px;
 
-    @media (max-width: 375px) {
+    @media (max-width: $breakpoint-small) {
         margin: 25px 20px;
     }
 
@@ -26,7 +26,7 @@
             text-decoration: underline;
         }
 
-        @media (max-width: 375px) {
+        @media (max-width: $breakpoint-small) {
             text-transform: uppercase;
             margin-left: 25px;
             @include text-format($color-tertiary, 12px, 500);

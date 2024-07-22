@@ -4,7 +4,7 @@
     padding: 40px 100px 140px 100px;
     @include column-flexbox(100px);
 
-    @media (max-width: 375px) {
+    @media (max-width: $breakpoint-small) {
         text-align: center;
         padding: 80px 60px 110px 60px;
     }
@@ -12,7 +12,7 @@
     &__title {
         @include text-format($color-primary, 288px, 700);
 
-        @media (max-width: 375px) {
+        @media (max-width: $breakpoint-small) {
             @include text-format($color-primary, 96px, 700);
         }
     }
@@ -20,7 +20,7 @@
     &__text {
         @include text-format($color-primary, 36px, 500);
 
-        @media (max-width: 375px) {
+        @media (max-width: $breakpoint-small) {
             @include text-format($color-primary, 18px, 500);
         }
     }
@@ -29,7 +29,7 @@
         margin-top: 45px;
         @include text-format($color-tertiary, 18px, 500);
 
-        @media (max-width: 375px) {
+        @media (max-width: $breakpoint-small) {
             margin-top: 25px;
             @include text-format($color-tertiary, 14px, 500);
         }
