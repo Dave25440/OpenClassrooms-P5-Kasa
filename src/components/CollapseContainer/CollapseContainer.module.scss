@@ -1,0 +1,8 @@
+@import "../Layout/Layout.module.scss";
+
+.collapselist {
+    list-style: none;
+    padding: 0;
+    margin: 40px 208.5px;
+    @include column-flexbox(30px);
+}

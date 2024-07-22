@@ -1,0 +1,17 @@
+@import "../Layout/Layout.module.scss";
+
+.collapsebar {
+    &__title {
+        background-color: $color-primary;
+        border-radius: 5px;
+        padding: 10px 20px;
+        @include text-format($color-secondary, 24px, 700);
+    }
+
+    &__text {
+        background-color: $color-collapseframe;
+        border-radius: 5px;
+        padding: 20px;
+        @include text-format($color-tertiary, 18px, 400);
+    }
+}
