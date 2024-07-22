@@ -3,7 +3,7 @@
 .bannerblock {
     text-align: center;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url("../../assets/home-illustration.png") no-repeat center;
+        url("../../assets/home-illustration.webp") no-repeat center;
     margin: 0 100px;
     @include radius-shadow(25px, drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25)));
 
@@ -16,7 +16,7 @@
 
     &--alt {
         background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-            url("../../assets/about-illustration.png") no-repeat center;
+            url("../../assets/about-illustration.webp") no-repeat center;
         @include radius-shadow(25px, none);
 
         @media (max-width: $breakpoint-small) {
