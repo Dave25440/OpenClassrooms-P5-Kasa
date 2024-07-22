@@ -3,6 +3,11 @@
 .collapselist {
     list-style: none;
     padding: 0;
-    margin: 40px 208.5px;
+    margin: 38px 208.5px;
     @include column-flexbox(30px);
+
+    @media (max-width: $breakpoint-small) {
+        margin: 20px;
+        @include column-flexbox(20px);
+    }
 }

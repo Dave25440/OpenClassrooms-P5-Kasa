@@ -9,8 +9,13 @@
     &__title {
         background-color: $color-primary;
         border-radius: 5px;
-        padding: 10px 20px;
+        padding: 10px 15px;
         @include text-format($color-secondary, 24px, 700);
+
+        @media (max-width: $breakpoint-small) {
+            padding: 10px;
+            @include text-format($color-secondary, 13px, 700);
+        }
     }
 
     &__button {
@@ -21,10 +26,19 @@
         border: 0;
         padding: 0;
         cursor: pointer;
+
+        @media (max-width: $breakpoint-small) {
+            top: 10px;
+            right: 12px;
+        }
     }
 
     &__text {
-        padding: 20px;
+        padding: 15px 20px 20px 20px;
         @include text-format($color-tertiary, 18px, 400);
+
+        @media (max-width: $breakpoint-small) {
+            @include text-format($color-tertiary, 12px, 400);
+        }
     }
 }
