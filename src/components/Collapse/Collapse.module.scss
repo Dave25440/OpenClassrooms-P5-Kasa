@@ -2,6 +2,9 @@
 
 .collapsebar {
     position: relative;
+    background-color: $color-collapseframe;
+    width: 100%;
+    border-radius: 5px;
 
     &__title {
         background-color: $color-primary;
@@ -14,11 +17,13 @@
         position: absolute;
         top: 19px;
         right: 24px;
+        background-color: transparent;
+        border: 0;
+        padding: 0;
+        cursor: pointer;
     }
 
     &__text {
-        background-color: $color-collapseframe;
-        border-radius: 5px;
         padding: 20px;
         @include text-format($color-tertiary, 18px, 400);
     }
