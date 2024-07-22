@@ -5,7 +5,7 @@ const Banner = () => {
     const location = useLocation();
 
     return (
-        <aside
+        <div
             className={`${styles.bannerblock} ${
                 location.pathname === "/a-propos" && styles["bannerblock--alt"]
             }`}
@@ -18,7 +18,7 @@ const Banner = () => {
             >
                 Chez vous, partout et ailleurs
             </h1>
-        </aside>
+        </div>
     );
 };
 
