@@ -7,16 +7,13 @@ const Banner = () => {
     return (
         <aside
             className={`${styles.bannerblock} ${
-                location.pathname === "/a-propos"
-                    ? styles["bannerblock--alt"]
-                    : null
+                location.pathname === "/a-propos" && styles["bannerblock--alt"]
             }`}
         >
             <h1
                 className={`${styles.bannerblock__text} ${
-                    location.pathname === "/a-propos"
-                        ? styles["bannerblock__text--hidden"]
-                        : null
+                    location.pathname === "/a-propos" &&
+                    styles["bannerblock__text--hidden"]
                 }`}
             >
                 Chez vous, partout et ailleurs

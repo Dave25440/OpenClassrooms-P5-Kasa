@@ -18,9 +18,8 @@ const Header = () => {
                         <Link
                             to="/"
                             className={`${styles.headblock__link} ${
-                                location.pathname === "/"
-                                    ? styles["headblock__link--underline"]
-                                    : null
+                                location.pathname === "/" &&
+                                styles["headblock__link--underline"]
                             }`}
                         >
                             Accueil
@@ -30,9 +29,8 @@ const Header = () => {
                         <Link
                             to="/a-propos"
                             className={`${styles.headblock__link} ${
-                                location.pathname === "/a-propos"
-                                    ? styles["headblock__link--underline"]
-                                    : null
+                                location.pathname === "/a-propos" &&
+                                styles["headblock__link--underline"]
                             }`}
                         >
                             À Propos
