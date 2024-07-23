@@ -2,27 +2,25 @@
 @import "../../styles/_variables.scss";
 
 .collapsebar {
-    position: relative;
     background-color: $color-collapseframe;
     width: 100%;
     border-radius: 5px;
 
     &__title {
+        display: flex;
+        justify-content: space-between;
         background-color: $color-primary;
         border-radius: 5px;
-        padding: 10px 15px;
+        padding: 10px 19px 10px 15px;
         @include text-format($color-secondary, 24px, 700);
 
         @media (max-width: $breakpoint-small) {
-            padding: 10px;
+            padding: 10px 12px 10px 10px;
             @include text-format($color-secondary, 13px, 700);
         }
     }
 
     &__button {
-        position: absolute;
-        top: 19px;
-        right: 24px;
         background-color: transparent;
         border: 0;
         padding: 0;
@@ -31,11 +29,6 @@
 
         &--open {
             transform: rotate(-180deg);
-        }
-
-        @media (max-width: $breakpoint-small) {
-            top: 10px;
-            right: 12px;
         }
     }
 
