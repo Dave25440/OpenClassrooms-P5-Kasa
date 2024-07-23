@@ -1,3 +1,9 @@
+@mixin text-format($color, $size, $weight) {
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+}
+
 @mixin column-flexbox($gap) {
     display: flex;
     flex-direction: column;
@@ -5,10 +11,9 @@
     gap: $gap;
 }
 
-@mixin text-format($color, $size, $weight) {
-    color: $color;
-    font-size: $size;
-    font-weight: $weight;
+@mixin radius-shadow($radius, $filter) {
+    border-radius: $radius;
+    filter: $filter;
 }
 
 @mixin card-format($width, $height) {
@@ -17,7 +22,11 @@
     border-radius: 10px;
 }
 
-@mixin radius-shadow($radius, $filter) {
-    border-radius: $radius;
-    filter: $filter;
+@mixin collapse-animation($grid, $padding, $opacity, $translate) {
+    display: grid;
+    grid-template-rows: $grid;
+    padding: $padding;
+    opacity: $opacity;
+    transform: translateY($translate);
+    transition: all 0.3s ease, opacity 0.5s ease-out;
 }
