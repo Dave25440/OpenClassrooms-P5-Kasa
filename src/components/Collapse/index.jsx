@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./Collapse.module.scss";
-import ChevronUp from "../../assets/chevron-up.png";
-import SmallChevronUp from "../../assets/chevron-up-small.png";
+import ChevronUp from "../../assets/chevron-up.svg";
+import SmallChevronUp from "../../assets/chevron-up-small.svg";
 
 const Collapse = ({ title, content }) => {
     const [isOpen, setIsOpen] = useState(false);

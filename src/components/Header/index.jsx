@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import styles from "./Header.module.scss";
-import Logo from "../../assets/kasa-logo.png";
-import SmallLogo from "../../assets/kasa-logo-small.png";
+import Logo from "../../assets/kasa-logo.svg";
+import SmallLogo from "../../assets/kasa-logo-small.svg";
 
 const Header = () => {
     const location = useLocation();
