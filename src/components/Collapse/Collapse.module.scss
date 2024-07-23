@@ -27,6 +27,11 @@
         border: 0;
         padding: 0;
         cursor: pointer;
+        transition: transform 0.3s ease-out;
+
+        &--open {
+            transform: rotate(-180deg);
+        }
 
         @media (max-width: $breakpoint-small) {
             top: 10px;

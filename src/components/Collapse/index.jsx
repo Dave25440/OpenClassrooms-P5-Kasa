@@ -11,7 +11,9 @@ const Collapse = ({ title, content }) => {
             <li className={styles.collapsebar}>
                 <h2 className={styles.collapsebar__title}>{title}</h2>
                 <button
-                    className={styles.collapsebar__button}
+                    className={`${styles.collapsebar__button} ${
+                        isOpen && styles["collapsebar__button--open"]
+                    }`}
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     <picture>
