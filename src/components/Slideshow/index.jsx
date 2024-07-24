@@ -25,35 +25,37 @@ const Slideshow = ({ title, pictures }) => {
                 alt={title}
                 className={styles.carousel__slide}
             />
-            <div className={styles.carousel__controls}>
-                <button
-                    className={`${styles.carousel__button} ${styles["carousel__button--left"]}`}
-                    onClick={prevIndex}
-                >
-                    <picture>
-                        <source
-                            srcSet={SmallChevronLeft}
-                            media="(max-width: 768px)"
-                        />
-                        <img src={ChevronLeft} alt="Bouton Précédent" />
-                    </picture>
-                </button>
-                <button
-                    className={`${styles.carousel__button} ${styles["carousel__button--right"]}`}
-                    onClick={nextIndex}
-                >
-                    <picture>
-                        <source
-                            srcSet={SmallChevronLeft}
-                            media="(max-width: 768px)"
-                        />
-                        <img src={ChevronLeft} alt="Bouton Suivant" />
-                    </picture>
-                </button>
-                <p className={styles.carousel__number}>
-                    {currentIndex + 1}/{pictures.length}
-                </p>
-            </div>
+            {pictures.length > 1 && (
+                <div className={styles.carousel__controls}>
+                    <button
+                        className={`${styles.carousel__button} ${styles["carousel__button--left"]}`}
+                        onClick={prevIndex}
+                    >
+                        <picture>
+                            <source
+                                srcSet={SmallChevronLeft}
+                                media="(max-width: 768px)"
+                            />
+                            <img src={ChevronLeft} alt="Bouton Précédent" />
+                        </picture>
+                    </button>
+                    <button
+                        className={`${styles.carousel__button} ${styles["carousel__button--right"]}`}
+                        onClick={nextIndex}
+                    >
+                        <picture>
+                            <source
+                                srcSet={SmallChevronLeft}
+                                media="(max-width: 768px)"
+                            />
+                            <img src={ChevronLeft} alt="Bouton Suivant" />
+                        </picture>
+                    </button>
+                    <p className={styles.carousel__number}>
+                        {currentIndex + 1}/{pictures.length}
+                    </p>
+                </div>
+            )}
         </div>
     );
 };
