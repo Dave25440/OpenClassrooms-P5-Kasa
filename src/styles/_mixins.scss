@@ -16,10 +16,17 @@
     filter: $filter;
 }
 
-@mixin card-format($width, $height) {
+@mixin block-format($width, $height, $radius) {
     width: $width;
     height: $height;
-    border-radius: 10px;
+    border-radius: $radius;
+}
+
+@mixin chevron-button {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
 }
 
 @mixin collapse-animation($grid, $padding, $opacity, $translate) {

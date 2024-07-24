@@ -24,11 +24,8 @@
     }
 
     &__button {
-        background-color: transparent;
-        border: 0;
-        padding: 0;
-        cursor: pointer;
         transition: transform 0.3s ease-out;
+        @include chevron-button;
 
         &--open {
             transform: rotate(-180deg);
