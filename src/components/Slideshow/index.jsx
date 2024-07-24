@@ -1,5 +1,6 @@
 import styles from "./Slideshow.module.scss";
 import ChevronLeft from "../../assets/chevron-left.svg";
+import SmallChevronLeft from "../../assets/chevron-left-small.svg";
 
 const Slideshow = ({ title, pictures }) => {
     return (
@@ -13,12 +14,24 @@ const Slideshow = ({ title, pictures }) => {
                 <button
                     className={`${styles.carousel__button} ${styles["carousel__button--left"]}`}
                 >
-                    <img src={ChevronLeft} alt="Bouton Précédent" />
+                    <picture>
+                        <source
+                            srcSet={SmallChevronLeft}
+                            media="(max-width: 768px)"
+                        />
+                        <img src={ChevronLeft} alt="Bouton Précédent" />
+                    </picture>
                 </button>
                 <button
                     className={`${styles.carousel__button} ${styles["carousel__button--right"]}`}
                 >
-                    <img src={ChevronLeft} alt="Bouton Suivant" />
+                    <picture>
+                        <source
+                            srcSet={SmallChevronLeft}
+                            media="(max-width: 768px)"
+                        />
+                        <img src={ChevronLeft} alt="Bouton Suivant" />
+                    </picture>
                 </button>
                 <p className={styles.carousel__number}>1/{pictures.length}</p>
             </div>
