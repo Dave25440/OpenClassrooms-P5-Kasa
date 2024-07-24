@@ -11,6 +11,7 @@ const Housing = () => {
                 (housing) =>
                     housing.id === id && (
                         <Slideshow
+                            key={housing.id}
                             title={housing.title}
                             pictures={housing.pictures}
                         />
