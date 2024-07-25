@@ -57,6 +57,17 @@
     &__tags {
         display: flex;
         gap: 10px;
+        list-style: none;
+        padding: 0;
+    }
+
+    &__tag {
+        text-align: center;
+        background-color: $color-primary;
+        min-width: 75px;
+        border-radius: 10px;
+        padding: 3.5px 20px;
+        @include text-format($color-secondary, 14px, 700);
     }
 
     &__rating {

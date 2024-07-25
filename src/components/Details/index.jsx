@@ -28,7 +28,13 @@ const Details = ({
                 />
             </figure>
             <ul className={styles.detailsgrid__list}>
-                <li className={styles.detailsgrid__tags}>{tags}</li>
+                <li>
+                    <ul className={styles.detailsgrid__tags}>
+                        {tags.map((tag) => (
+                            <li className={styles.detailsgrid__tag}>{tag}</li>
+                        ))}
+                    </ul>
+                </li>
                 <Collapse title="Description" content={description} />
             </ul>
             <ul className={styles.detailsgrid__list}>
