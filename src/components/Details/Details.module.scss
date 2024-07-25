@@ -34,6 +34,18 @@
         width: 15%;
     }
 
+    &__hostname {
+        text-align: right;
+        @include text-format($color-primary, 18px, 500);
+    }
+
+    &__hostpicture {
+        width: 64px;
+        border-radius: 32px;
+        margin-left: 10px;
+        object-fit: cover;
+    }
+
     &__list {
         display: flex;
         flex-direction: column;

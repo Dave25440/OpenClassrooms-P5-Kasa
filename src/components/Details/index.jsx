@@ -18,8 +18,14 @@ const Details = ({
                 <p className={styles.detailsgrid__location}>{location}</p>
             </div>
             <figure className={styles.detailsgrid__host}>
-                <figcaption>{hostName}</figcaption>
-                <img src={hostPicture} alt={hostName} />
+                <figcaption className={styles.detailsgrid__hostname}>
+                    {hostName}
+                </figcaption>
+                <img
+                    src={hostPicture}
+                    alt={hostName}
+                    className={styles.detailsgrid__hostpicture}
+                />
             </figure>
             <ul className={styles.detailsgrid__list}>
                 <li className={styles.detailsgrid__tags}>{tags}</li>
