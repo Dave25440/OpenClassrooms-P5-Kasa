@@ -39,7 +39,16 @@ const Details = ({
             </ul>
             <ul className={styles.detailsgrid__list}>
                 <li className={styles.detailsgrid__rating}>{rating}</li>
-                <Collapse title="Équipements" content={equipments} />
+                <Collapse
+                    title="Équipements"
+                    content={
+                        <ul className={styles.detailsgrid__equipments}>
+                            {equipments.map((equipment) => (
+                                <li>{equipment}</li>
+                            ))}
+                        </ul>
+                    }
+                />
             </ul>
         </section>
     );
