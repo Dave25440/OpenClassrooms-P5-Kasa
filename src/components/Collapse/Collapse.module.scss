@@ -17,6 +17,12 @@
         padding: 10px 19px 10px 15px;
         @include text-format($color-secondary, 24px, 700);
 
+        &--details {
+            border-radius: 10px;
+            padding: 15px 19px 15px 10px;
+            @include text-format($color-secondary, 18px, 700);
+        }
+
         @media (max-width: $breakpoint-small) {
             padding: 10px 12px 10px 10px;
             @include text-format($color-secondary, 13px, 700);

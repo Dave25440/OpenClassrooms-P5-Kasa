@@ -35,12 +35,17 @@ const Details = ({
                         ))}
                     </ul>
                 </li>
-                <Collapse title="Description" content={description} />
+                <Collapse
+                    title="Description"
+                    titleClass="collapsebar__title--details"
+                    content={description}
+                />
             </ul>
             <ul className={styles.detailsgrid__list}>
                 <li className={styles.detailsgrid__rating}>{rating}</li>
                 <Collapse
                     title="Équipements"
+                    titleClass="collapsebar__title--details"
                     content={
                         <ul className={styles.detailsgrid__equipments}>
                             {equipments.map((equipment) => (

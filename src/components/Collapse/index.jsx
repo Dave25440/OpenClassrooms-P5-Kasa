@@ -3,12 +3,16 @@ import styles from "./Collapse.module.scss";
 import ChevronUp from "../../assets/chevron-up.svg";
 import SmallChevronUp from "../../assets/chevron-up-small.svg";
 
-const Collapse = ({ title, content }) => {
+const Collapse = ({ title, titleClass, content }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
         <li className={styles.collapsebar}>
-            <h2 className={styles.collapsebar__title}>
+            <h2
+                className={`${styles.collapsebar__title} ${
+                    titleClass && styles[titleClass]
+                }`}
+            >
                 {title}
                 <button
                     className={`${styles.collapsebar__button} ${
