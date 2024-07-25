@@ -4,8 +4,7 @@
 .cardsection {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 60px;
-    row-gap: 50px;
+    gap: 50px 60px;
     background-color: $color-cardblock;
     border-radius: 25px;
     padding: 50px;
@@ -17,7 +16,7 @@
 
     @media (max-width: $breakpoint-small) {
         grid-template-columns: 1fr;
-        row-gap: 20px;
+        gap: 20px 0;
         background-color: transparent;
         border-radius: 10px;
         padding: 0;

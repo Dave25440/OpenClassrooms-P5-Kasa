@@ -13,22 +13,20 @@ const Details = ({
 }) => {
     return (
         <section className={styles.detailsgrid}>
-            <ul>
-                <li>
-                    <h1>{title}</h1>
-                    <p>{location}</p>
-                </li>
-                <li>{tags}</li>
+            <div className={styles.detailsgrid__titleblock}>
+                <h1 className={styles.detailsgrid__title}>{title}</h1>
+                <p className={styles.detailsgrid__location}>{location}</p>
+            </div>
+            <figure className={styles.detailsgrid__host}>
+                <figcaption>{hostName}</figcaption>
+                <img src={hostPicture} alt={hostName} />
+            </figure>
+            <ul className={styles.detailsgrid__list}>
+                <li className={styles.detailsgrid__tags}>{tags}</li>
                 <Collapse title="Description" content={description} />
             </ul>
-            <ul>
-                <li>
-                    <figure>
-                        <img src={hostPicture} alt={hostName} />
-                        <figcaption>{hostName}</figcaption>
-                    </figure>
-                </li>
-                <li>{rating}</li>
+            <ul className={styles.detailsgrid__list}>
+                <li className={styles.detailsgrid__rating}>{rating}</li>
                 <Collapse title="Équipements" content={equipments} />
             </ul>
         </section>
