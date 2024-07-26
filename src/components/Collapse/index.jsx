@@ -11,7 +11,7 @@ const Collapse = ({ title, titleClass, content }) => {
             <h2
                 className={`${styles.collapsebar__title} ${
                     titleClass && styles[titleClass]
-                }`}
+                } ${isOpen && styles["collapsebar__title--open"]}`}
             >
                 {title}
                 <button
