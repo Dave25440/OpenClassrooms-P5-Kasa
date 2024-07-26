@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import housingList from "../../data/housingList.json";
 import Slideshow from "../../components/Slideshow";
@@ -6,6 +6,14 @@ import Details from "../../components/Details";
 
 const Housing = () => {
     const { id } = useParams();
+
+    useEffect(() => {
+        housingList.find(
+            (housing) =>
+                housing.id === id &&
+                (document.title = `Kasa - ${housing.title}`)
+        );
+    }, [id]);
 
     return (
         <>
