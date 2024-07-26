@@ -1,5 +1,7 @@
 import Collapse from "../Collapse";
 import styles from "./Details.module.scss";
+import StarActive from "../../assets/star-active.svg";
+import StarInactive from "../../assets/star-inactive.svg";
 
 const Details = ({
     title,
@@ -11,6 +13,8 @@ const Details = ({
     equipments,
     tags
 }) => {
+    const rate = [1, 2, 3, 4, 5];
+
     return (
         <section className={styles.detailsgrid}>
             <div className={styles.detailsgrid__titleblock}>
@@ -42,7 +46,15 @@ const Details = ({
                 />
             </ul>
             <ul className={styles.detailsgrid__list}>
-                <li className={styles.detailsgrid__rating}>{rating}</li>
+                <li className={styles.detailsgrid__rating}>
+                    {rate.map((rateValue) =>
+                        rating >= rateValue ? (
+                            <img src={StarActive} alt="Étoile active" />
+                        ) : (
+                            <img src={StarInactive} alt="Étoile inactive" />
+                        )
+                    )}
+                </li>
                 <Collapse
                     title="Équipements"
                     titleClass="collapsebar__title--details"

@@ -72,6 +72,8 @@
 
     &__rating {
         align-self: end;
+        display: flex;
+        gap: 12px;
     }
 
     &__equipments {
