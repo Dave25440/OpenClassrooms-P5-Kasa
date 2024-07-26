@@ -13,8 +13,7 @@
 
     &__list {
         display: flex;
-        list-style: none;
-        padding: 0;
+        @include list-format;
     }
 
     &__link {

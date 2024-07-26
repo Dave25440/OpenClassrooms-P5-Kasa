@@ -4,11 +4,16 @@
     font-weight: $weight;
 }
 
-@mixin column-flexbox($gap) {
+@mixin column-flexbox($align, $gap) {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: $align;
     gap: $gap;
+}
+
+@mixin list-format {
+    list-style: none;
+    padding: 0;
 }
 
 @mixin radius-shadow($radius, $filter) {
@@ -36,4 +41,10 @@
     opacity: $opacity;
     transform: translateY($translate);
     transition: all 0.3s ease, opacity 0.5s ease-out;
+}
+
+@mixin overlapping-element($width) {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    width: $width;
 }

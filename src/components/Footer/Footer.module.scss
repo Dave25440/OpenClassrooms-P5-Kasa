@@ -5,13 +5,13 @@
     background-color: $color-tertiary;
     padding: 65px 0 30px 0;
     @include text-format($color-secondary, 24px, 500);
-    @include column-flexbox(45px);
+    @include column-flexbox(center, 45px);
 
     @media (max-width: $breakpoint-small) {
         text-align: center;
         padding: 60px 135px;
         @include text-format($color-secondary, 12px, 500);
-        @include column-flexbox(15px);
+        @include column-flexbox(center, 15px);
     }
 
     &__logo {

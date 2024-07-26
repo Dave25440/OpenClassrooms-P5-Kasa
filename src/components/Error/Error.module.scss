@@ -3,7 +3,7 @@
 
 .errorblock {
     padding: 40px 100px 140px 100px;
-    @include column-flexbox(100px);
+    @include column-flexbox(center, 100px);
 
     @media (max-width: $breakpoint-small) {
         text-align: center;
