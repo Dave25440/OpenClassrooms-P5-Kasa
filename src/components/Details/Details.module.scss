@@ -2,23 +2,38 @@
 @import "../../styles/_variables.scss";
 
 .detailsgrid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px 76px;
-    margin: 25px 100px 55px 100px;
+    @include column-grid(repeat(2, 1fr), 25px 0, 25px 100px 55px 100px);
+
+    @media (max-width: $breakpoint-small) {
+        @include column-grid(1fr, 15px 0, 6px 20px 25px 20px);
+    }
 
     &__titleblock {
         padding: 3px 0;
-        @include overlapping-element(85%);
+        @include overlapping-element(1 / span 2, 1, 85%);
+
+        @media (max-width: $breakpoint-small) {
+            padding: 0;
+            @include overlapping-element(1, 1, 100%);
+        }
     }
 
     &__title {
         margin-bottom: 5px;
         @include text-format($color-primary, 36px, 500);
+
+        @media (max-width: $breakpoint-small) {
+            margin-bottom: 10px;
+            @include text-format($color-primary, 18px, 500);
+        }
     }
 
     &__location {
         @include text-format($color-tertiary, 18px, 500);
+
+        @media (max-width: $breakpoint-small) {
+            @include text-format($color-tertiary, 14px, 500);
+        }
     }
 
     &__host {
@@ -27,44 +42,84 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        @include overlapping-element(15%);
+        @include overlapping-element(2, 1, 30%);
+
+        @media (max-width: $breakpoint-small) {
+            @include overlapping-element(1, 3, 30%);
+        }
     }
 
     &__hostname {
         text-align: right;
         @include text-format($color-primary, 18px, 500);
+
+        @media (max-width: $breakpoint-small) {
+            @include text-format($color-primary, 12px, 500);
+        }
     }
 
     &__hostpicture {
         margin-left: 10px;
         object-fit: cover;
         @include block-format(64px, 100%, 32px);
-    }
 
-    &__list {
-        @include column-flexbox(flex-start, 25px);
-        @include list-format;
+        @media (max-width: $breakpoint-small) {
+            @include block-format(32px, 100%, 16px);
+        }
     }
 
     &__tags {
         display: flex;
+        flex-flow: row wrap;
         gap: 10px;
         @include list-format;
+
+        @media (max-width: $breakpoint-small) {
+            grid-row: 2;
+        }
     }
 
     &__tag {
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: $color-primary;
-        min-width: 75px;
-        border-radius: 10px;
-        padding: 3.5px 20px;
+        white-space: nowrap;
         @include text-format($color-secondary, 14px, 700);
+        @include tag-format(75px, 10px, 3.5px 20px);
+
+        @media (max-width: $breakpoint-small) {
+            @include text-format($color-secondary, 10px, 700);
+            @include tag-format(54px, 5px, 2.5px 15px);
+        }
     }
 
     &__rating {
-        align-self: end;
+        justify-self: end;
         display: flex;
         gap: 12px;
+
+        @media (max-width: $breakpoint-small) {
+            grid-column: 1;
+            grid-row: 3;
+            justify-self: start;
+            align-self: center;
+            gap: 6px;
+        }
+    }
+
+    &__collapses {
+        grid-column: span 2;
+        display: flex;
+        gap: 76px;
+        @include list-format;
+
+        @media (max-width: $breakpoint-small) {
+            grid-column: 1;
+            grid-row: 4;
+            flex-direction: column;
+            gap: 20px;
+        }
     }
 
     &__equipments {

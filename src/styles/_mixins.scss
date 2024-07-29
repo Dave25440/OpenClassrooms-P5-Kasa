@@ -1,26 +1,3 @@
-@mixin text-format($color, $size, $weight) {
-    color: $color;
-    font-size: $size;
-    font-weight: $weight;
-}
-
-@mixin column-flexbox($align, $gap) {
-    display: flex;
-    flex-direction: column;
-    align-items: $align;
-    gap: $gap;
-}
-
-@mixin list-format {
-    list-style: none;
-    padding: 0;
-}
-
-@mixin radius-shadow($radius, $filter) {
-    border-radius: $radius;
-    filter: $filter;
-}
-
 @mixin block-format($width, $height, $radius) {
     width: $width;
     height: $height;
@@ -34,17 +11,53 @@
     cursor: pointer;
 }
 
-@mixin collapse-animation($grid, $padding, $opacity, $translate) {
+@mixin collapse-animation($rows, $padding, $opacity, $translate) {
     display: grid;
-    grid-template-rows: $grid;
+    grid-template-rows: $rows;
     padding: $padding;
     opacity: $opacity;
     transform: translateY($translate);
     transition: all 0.3s ease, opacity 0.5s ease-out;
 }
 
-@mixin overlapping-element($width) {
-    grid-column: 1 / span 2;
-    grid-row: 1;
+@mixin column-flexbox($gap) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $gap;
+}
+
+@mixin column-grid($columns, $gap, $margin) {
+    display: grid;
+    grid-template-columns: $columns;
+    gap: $gap;
+    margin: $margin;
+}
+
+@mixin list-format {
+    list-style: none;
+    padding: 0;
+}
+
+@mixin overlapping-element($column, $row, $width) {
+    grid-column: $column;
+    grid-row: $row;
     width: $width;
+}
+
+@mixin radius-shadow($radius, $filter) {
+    border-radius: $radius;
+    filter: $filter;
+}
+
+@mixin tag-format($width, $radius, $padding) {
+    min-width: $width;
+    border-radius: $radius;
+    padding: $padding;
+}
+
+@mixin text-format($color, $size, $weight) {
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
 }

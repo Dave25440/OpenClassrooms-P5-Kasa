@@ -1,7 +1,9 @@
 import Collapse from "../Collapse";
 import styles from "./Details.module.scss";
 import StarActive from "../../assets/star-active.svg";
+import SmallStarActive from "../../assets/star-active-small.svg";
 import StarInactive from "../../assets/star-inactive.svg";
+import SmallStarInactive from "../../assets/star-inactive-small.svg";
 
 const Details = ({
     title,
@@ -31,30 +33,38 @@ const Details = ({
                     className={styles.detailsgrid__hostpicture}
                 />
             </figure>
-            <ul className={styles.detailsgrid__list}>
-                <li>
-                    <ul className={styles.detailsgrid__tags}>
-                        {tags.map((tag) => (
-                            <li className={styles.detailsgrid__tag}>{tag}</li>
-                        ))}
-                    </ul>
-                </li>
+            <ul className={styles.detailsgrid__tags}>
+                {tags.map((tag) => (
+                    <li className={styles.detailsgrid__tag}>{tag}</li>
+                ))}
+            </ul>
+            <div className={styles.detailsgrid__rating}>
+                {rate.map((rateValue) =>
+                    rating >= rateValue ? (
+                        <picture>
+                            <source
+                                srcSet={SmallStarActive}
+                                media="(max-width: 768px)"
+                            />
+                            <img src={StarActive} alt="Étoile active" />
+                        </picture>
+                    ) : (
+                        <picture>
+                            <source
+                                srcSet={SmallStarInactive}
+                                media="(max-width: 768px)"
+                            />
+                            <img src={StarInactive} alt="Étoile inactive" />
+                        </picture>
+                    )
+                )}
+            </div>
+            <ul className={styles.detailsgrid__collapses}>
                 <Collapse
                     title="Description"
                     titleClass="collapsebar__title--medium"
                     content={description}
                 />
-            </ul>
-            <ul className={styles.detailsgrid__list}>
-                <li className={styles.detailsgrid__rating}>
-                    {rate.map((rateValue) =>
-                        rating >= rateValue ? (
-                            <img src={StarActive} alt="Étoile active" />
-                        ) : (
-                            <img src={StarInactive} alt="Étoile inactive" />
-                        )
-                    )}
-                </li>
                 <Collapse
                     title="Équipements"
                     titleClass="collapsebar__title--medium"

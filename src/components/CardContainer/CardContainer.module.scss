@@ -2,24 +2,19 @@
 @import "../../styles/_variables.scss";
 
 .cardsection {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px 60px;
     background-color: $color-cardblock;
     border-radius: 25px;
     padding: 50px;
-    margin: 50px 100px;
+    @include column-grid(repeat(3, 1fr), 50px 60px, 50px 100px);
 
     @media (max-width: $breakpoint-medium) {
-        grid-template-columns: repeat(2, 1fr);
+        @include column-grid(repeat(2, 1fr), 50px 60px, 50px 100px);
     }
 
     @media (max-width: $breakpoint-small) {
-        grid-template-columns: 1fr;
-        gap: 20px 0;
         background-color: transparent;
         border-radius: 10px;
         padding: 0;
-        margin: 25px 20px;
+        @include column-grid(1fr, 20px 0, 25px 20px);
     }
 }
