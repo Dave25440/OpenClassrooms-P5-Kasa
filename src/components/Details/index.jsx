@@ -34,14 +34,16 @@ const Details = ({
                 />
             </figure>
             <ul className={styles.detailsgrid__tags}>
-                {tags.map((tag) => (
-                    <li className={styles.detailsgrid__tag}>{tag}</li>
+                {tags.map((tag, index) => (
+                    <li key={index} className={styles.detailsgrid__tag}>
+                        {tag}
+                    </li>
                 ))}
             </ul>
             <div className={styles.detailsgrid__rating}>
-                {rate.map((rateValue) =>
+                {rate.map((rateValue, index) =>
                     rating >= rateValue ? (
-                        <picture>
+                        <picture key={index}>
                             <source
                                 srcSet={SmallStarActive}
                                 media="(max-width: 768px)"
@@ -49,7 +51,7 @@ const Details = ({
                             <img src={StarActive} alt="Étoile active" />
                         </picture>
                     ) : (
-                        <picture>
+                        <picture key={index}>
                             <source
                                 srcSet={SmallStarInactive}
                                 media="(max-width: 768px)"
@@ -70,8 +72,8 @@ const Details = ({
                     titleClass="collapsebar__title--medium"
                     content={
                         <ul className={styles.detailsgrid__equipments}>
-                            {equipments.map((equipment) => (
-                                <li>{equipment}</li>
+                            {equipments.map((equipment, index) => (
+                                <li key={index}>{equipment}</li>
                             ))}
                         </ul>
                     }
