@@ -63,7 +63,7 @@ const Details = ({
                 <Collapse
                     title="Description"
                     titleClass="collapsebar__title--medium"
-                    content={description}
+                    content={<p>{description}</p>}
                 />
                 <Collapse
                     title="Équipements"

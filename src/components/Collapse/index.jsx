@@ -34,7 +34,7 @@ const Collapse = ({ title, titleClass, content }) => {
                     isOpen && styles["collapsebar__wrapper--open"]
                 }`}
             >
-                <p className={styles.collapsebar__text}>{content}</p>
+                <div className={styles.collapsebar__content}>{content}</div>
             </div>
         </li>
     );

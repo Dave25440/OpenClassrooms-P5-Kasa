@@ -2,7 +2,6 @@
 @import "../../styles/_variables.scss";
 
 .collapsebar {
-    background-color: $color-collapseframe;
     width: 100%;
     border-radius: 5px;
     overflow: hidden;
@@ -14,8 +13,9 @@
         z-index: 1;
         background-color: $color-primary;
         border-radius: 5px;
+        box-shadow: none;
         padding: 10px 19px 10px 15px;
-        transition: border-radius 0.3s ease;
+        transition: all 0.3s ease;
         @include text-format($color-secondary, 24px, 700);
 
         &--medium {
@@ -30,6 +30,7 @@
 
         &--open {
             border-radius: 5px;
+            box-shadow: -5px 0 $color-collapseframe, 5px 0 $color-collapseframe;
         }
 
         @media (max-width: $breakpoint-small) {
@@ -48,6 +49,8 @@
     }
 
     &__wrapper {
+        background-color: $color-collapseframe;
+        border-radius: 0 0 5px 5px;
         @include text-format($color-tertiary, 18px, 400);
         @include collapse-animation(0fr, 0 20px, 0, -25vh);
 
@@ -60,7 +63,7 @@
         }
     }
 
-    &__text {
+    &__content {
         overflow: hidden;
     }
 }

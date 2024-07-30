@@ -10,7 +10,7 @@ const CollapseContainer = () => {
                     <Collapse
                         key={about.id}
                         title={about.title}
-                        content={about.content}
+                        content={<p>{about.content}</p>}
                     />
                 ))}
             </ul>
