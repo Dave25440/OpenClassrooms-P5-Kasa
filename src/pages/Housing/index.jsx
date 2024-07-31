@@ -9,13 +9,13 @@ const Housing = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        const foundId = housingList.find((housing) => housing.id === id);
-
         housingList.find(
             (housing) =>
                 housing.id === id &&
                 (document.title = `Kasa - ${housing.title}`)
         );
+
+        const foundId = housingList.find((housing) => housing.id === id);
 
         if (!foundId) {
             navigate("/erreur");
