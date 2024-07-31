@@ -1,3 +1,4 @@
+import Host from "../Host";
 import Tag from "../Tag";
 import Star from "../Star";
 import Collapse from "../Collapse";
@@ -22,14 +23,7 @@ const Details = ({
                 <p className={styles.detailsgrid__location}>{location}</p>
             </div>
             <figure className={styles.detailsgrid__host}>
-                <figcaption className={styles.detailsgrid__hostname}>
-                    {hostName}
-                </figcaption>
-                <img
-                    src={hostPicture}
-                    alt={hostName}
-                    className={styles.detailsgrid__hostpicture}
-                />
+                <Host name={hostName} picture={hostPicture} />
             </figure>
             <ul className={styles.detailsgrid__tags}>
                 {tags.map((tag, index) => (

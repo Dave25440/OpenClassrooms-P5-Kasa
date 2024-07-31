@@ -1,0 +1,21 @@
+@import "../../styles/_mixins.scss";
+@import "../../styles/_variables.scss";
+
+.hostname {
+    text-align: right;
+    @include text-format($color-primary, 18px, 500);
+
+    @media (max-width: $breakpoint-small) {
+        @include text-format($color-primary, 12px, 500);
+    }
+}
+
+.hostpicture {
+    margin-left: 10px;
+    object-fit: cover;
+    @include block-format(64px, 100%, 32px);
+
+    @media (max-width: $breakpoint-small) {
+        @include block-format(32px, 100%, 16px);
+    }
+}
