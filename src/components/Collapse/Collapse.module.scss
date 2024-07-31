@@ -13,7 +13,6 @@
         z-index: 1;
         background-color: $color-primary;
         border-radius: 5px;
-        box-shadow: none;
         padding: 10px 19px 10px 15px;
         transition: all 0.3s ease;
         @include text-format($color-secondary, 24px, 700);

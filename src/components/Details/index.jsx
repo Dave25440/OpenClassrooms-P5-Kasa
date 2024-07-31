@@ -1,10 +1,7 @@
 import Tag from "../Tag";
+import Star from "../Star";
 import Collapse from "../Collapse";
 import styles from "./Details.module.scss";
-import StarActive from "../../assets/star-active.svg";
-import SmallStarActive from "../../assets/star-active-small.svg";
-import StarInactive from "../../assets/star-inactive.svg";
-import SmallStarInactive from "../../assets/star-inactive-small.svg";
 
 const Details = ({
     title,
@@ -16,7 +13,7 @@ const Details = ({
     equipments,
     tags
 }) => {
-    const rate = [1, 2, 3, 4, 5];
+    const range = [1, 2, 3, 4, 5];
 
     return (
         <section className={styles.detailsgrid}>
@@ -40,23 +37,11 @@ const Details = ({
                 ))}
             </ul>
             <div className={styles.detailsgrid__rating}>
-                {rate.map((rateValue, index) =>
-                    rating >= rateValue ? (
-                        <picture key={index}>
-                            <source
-                                srcSet={SmallStarActive}
-                                media="(max-width: 768px)"
-                            />
-                            <img src={StarActive} alt="Étoile active" />
-                        </picture>
+                {range.map((rangeValue, index) =>
+                    rating >= rangeValue ? (
+                        <Star key={index} active={true} />
                     ) : (
-                        <picture key={index}>
-                            <source
-                                srcSet={SmallStarInactive}
-                                media="(max-width: 768px)"
-                            />
-                            <img src={StarInactive} alt="Étoile inactive" />
-                        </picture>
+                        <Star key={index} active={false} />
                     )
                 )}
             </div>

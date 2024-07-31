@@ -4,6 +4,7 @@
 .cardblock {
     position: relative;
     text-decoration: none;
+    transition: filter 0.2s ease;
     @include block-format(100%, 340px, 10px);
 
     &:hover {
