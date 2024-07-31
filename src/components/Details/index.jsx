@@ -1,3 +1,4 @@
+import Tag from "../Tag";
 import Collapse from "../Collapse";
 import styles from "./Details.module.scss";
 import StarActive from "../../assets/star-active.svg";
@@ -35,9 +36,7 @@ const Details = ({
             </figure>
             <ul className={styles.detailsgrid__tags}>
                 {tags.map((tag, index) => (
-                    <li key={index} className={styles.detailsgrid__tag}>
-                        {tag}
-                    </li>
+                    <Tag key={index} text={tag} />
                 ))}
             </ul>
             <div className={styles.detailsgrid__rating}>

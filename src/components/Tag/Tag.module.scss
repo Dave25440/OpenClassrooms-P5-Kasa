@@ -1,0 +1,17 @@
+@import "../../styles/_mixins.scss";
+@import "../../styles/_variables.scss";
+
+.tagblock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-primary;
+    white-space: nowrap;
+    @include text-format($color-secondary, 14px, 700);
+    @include tag-format(75px, 10px, 3.5px 20px);
+
+    @media (max-width: $breakpoint-small) {
+        @include text-format($color-secondary, 10px, 700);
+        @include tag-format(54px, 5px, 2.5px 15px);
+    }
+}
