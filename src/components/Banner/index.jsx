@@ -11,9 +11,9 @@ const Banner = () => {
             }`}
         >
             <h1
-                className={`${styles.bannerblock__text} ${
+                className={`${styles.bannerblock__title} ${
                     location.pathname === "/a-propos" &&
-                    styles["bannerblock__text--hidden"]
+                    styles["bannerblock__title--hidden"]
                 }`}
             >
                 Chez vous, partout et ailleurs
